@@ -1,0 +1,32 @@
+10:H J:H Q:H K:H A:H
+A:D K:D Q:D J:D 10:D
+K:C J:C 10:C A:C Q:C
+Q:S K:S A:S 10:S J:S
+2:H 3:H 4:H 5:H 6:H
+K:D Q:D J:D 10:D 9:D
+2:S 2:H 2:D 4:C 2:C
+J:S J:C 5:H J:H J:D
+Q:S 7:C Q:D 7:D 7:S
+7:S Q:C 7:D Q:D Q:S
+A:D 6:D 7:D 9:D 2:D
+2:D 3:H 4:H 5:H 6:C
+5:C 6:H 7:D 8:D 9:D
+5:H 5:D A:S 10:D 5:C
+8:H J:S 8:S 3:D 3:H
+A:D 2:D 2:C 9:S A:H
+Q:S 2:H 3:H 4:H Q:H
+2:H 3:H 4:H 5:H 7:D
+2:H 3:H 4:H 5:H 10:D
+2:H 3:H 4:H 5:H J:D
+2:H 3:H 4:H 5:H Q:D
+2:H 3:H 4:H 5:H K:D
+2:H 3:H 4:H 5:H A:D
+2:H 3:H 4:H 5:H A:D 5:C
+2:H 3:H 4:H 5:H
+2:H 3:H 4:H 2:H J:H
+2:U 3:H 4:H 5:H 6:H
+12:U 3:H 4:H 5:H 6:H
+2:S 3:H 14:H 5:H 6:H
+8:S 3:H 4:HS 5:H 6:H
+8:S 3:H 4:H 5:H 6:HS
+8:S 8:S 8:H 8:D 8:C

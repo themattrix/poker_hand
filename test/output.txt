@@ -1,0 +1,32 @@
+Royal flush
+Royal flush
+Royal flush
+Royal flush
+Straight flush
+Straight flush
+Four of a kind
+Four of a kind
+Full house
+Full house
+Flush
+Straight
+Straight
+Three of a kind
+Two pair
+Two pair
+One pair
+High card: 7
+High card: 10
+High card: J
+High card: Q
+High card: K
+High card: A
+ERROR: Too many cards
+ERROR: Too few cards
+ERROR: Duplicate card
+ERROR: Card has incorrect suit
+ERROR: Card has incorrect denomination
+ERROR: Card has incorrect denomination
+ERROR: Card has incorrect suit
+ERROR: Card has incorrect suit
+ERROR: Duplicate card
