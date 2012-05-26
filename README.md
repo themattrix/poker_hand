@@ -5,16 +5,17 @@ Given a poker hand, this sed script will output the name of the hand. For exampl
 
 The script comes in two flavors, _compact_ and _verbose_. They contain identical logic, but have different goals. The compact version is an attempt to be as short as possible (796 characters); the verbose version is commented to explain how it works.
 
-Here is the entire contents of `compact.sed` (manually wrapped at column 120):
+Here is the entire contents of `compact.sed` (manually wrapped at column 110):
 ```sed
 #!/bin/sed -rf
-x;s/.*//;x;s/10/T/g;tx;:x /([^2-9TJQKA]|[^ ].):/s/.*/Card has incorrect denomination/;tz;/:([^CDHS]|.[^ ])/s/.*/Card has
- incorrect suit/;tz;s/[ :]//g;ty;:y /.{11}/s/.*/Too many cards/;tz;/.{10}/!s/.*/Too few cards/;tz;/(.[CDHS]).*\1/s/.*/Du
-plicate card/;tz;s/^/23456789TJQKA /;ta;:a / $/bc;s/^(.)(.*) (.*)(\1.)(.*)$/\4 \1\2 \3\5/;tb;s/^.//;ta;:b H;x;s/\n(..).*
-/\1/;x;s/^.. //;ta;:c g;/.(.)(.\1){4}/s/^/f/;s/[CDHS]//g;s/^/23456789TJQKA /;/(.{5}).*\1/s/ / s/;s/.* //;te;:e /sf/{/A/s
-/.*/Royal flush/;t;s/.*/Straight flush/;b};/(.)\1{3}/s/.*/Four of a kind/;t;/((.)\2(.)\3\3|(.)\4\4(.)\5)/s/.*/Full house
-/;t;/f/{s/.*/Flush/;b};/s/s/.*/Straight/;t;/(.)\1\1/s/.*/Three of a kind/;t;/(.)\1.*(.)\2/s/.*/Two pair/;t;/(.)\1/s/.*/O
-ne pair/;t;s/.*(.)/High card: \1/;s/T$/10/;b;:z s/^/ERROR: /
+x;s/.*//;x;s/10/T/g;tx;:x /([^2-9TJQKA]|[^ ].):/s/.*/Card has incorrect denomination/;tz;/:([^CDHS]|.[^ ])/s/.
+*/Card has incorrect suit/;tz;s/[ :]//g;ty;:y /.{11}/s/.*/Too many cards/;tz;/.{10}/!s/.*/Too few cards/;tz;/(
+.[CDHS]).*\1/s/.*/Duplicate card/;tz;s/^/23456789TJQKA /;ta;:a / $/bc;s/^(.)(.*) (.*)(\1.)(.*)$/\4 \1\2 \3\5/;
+tb;s/^.//;ta;:b H;x;s/\n(..).*/\1/;x;s/^.. //;ta;:c g;/.(.)(.\1){4}/s/^/f/;s/[CDHS]//g;s/^/23456789TJQKA /;/(.
+{5}).*\1/s/ / s/;s/.* //;te;:e /sf/{/A/s/.*/Royal flush/;t;s/.*/Straight flush/;b};/(.)\1{3}/s/.*/Four of a ki
+nd/;t;/((.)\2(.)\3\3|(.)\4\4(.)\5)/s/.*/Full house/;t;/f/{s/.*/Flush/;b};/s/s/.*/Straight/;t;/(.)\1\1/s/.*/Thr
+ee of a kind/;t;/(.)\1.*(.)\2/s/.*/Two pair/;t;/(.)\1/s/.*/One pair/;t;s/.*(.)/High card: \1/;s/T$/10/;b;:z s/
+^/ERROR: /
 ```
 
 Example usage:
